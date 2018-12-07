@@ -32,7 +32,7 @@ class NoteListState extends State<NoteList> {
     return Scaffold(
 
 	    appBar: AppBar(
-				title: Text('Список планованих техоглядів'),
+				title: Text('Список запланованих техоглядів'),
 	    ),
 
 	    body: getNoteListView(),
@@ -81,7 +81,7 @@ class NoteListState extends State<NoteList> {
 
 
 						onTap: () {
-							debugPrint("Додано техогляд");
+							debugPrint("Техогляд додано");
 							navigateToDetail(this.noteList[position],'Редагувати техогляд');
 						},
 
@@ -125,7 +125,7 @@ class NoteListState extends State<NoteList> {
 
 		int result = await databaseHelper.deleteNote(note.id);
 		if (result != 0) {
-			_showSnackBar(context, ' Видалення запису  успішно');
+			_showSnackBar(context, ' Запис видалено успішно');
 			updateListView();
 		}
 	}
@@ -161,10 +161,3 @@ class NoteListState extends State<NoteList> {
 		});
   }
 }
-
-
-
-
-
-
-
