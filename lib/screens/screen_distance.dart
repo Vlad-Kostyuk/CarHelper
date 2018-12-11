@@ -7,12 +7,13 @@ class Screen_distance extends StatelessWidget {
   Widget build(BuildContext context) {
 
 
-    final appTitle = 'Screen №2(Actualizator, km.)';
+    final appTitle = 'Пройдений кілометраж';
 
     return MaterialApp(
       title: appTitle,
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.red,
+        primarySwatch: Colors.blue,
       ),
       home: Scaffold(
         appBar: AppBar(
@@ -52,23 +53,23 @@ class MyCustomFormState extends State<MyCustomForm> {
           TextFormField(
             validator: (value) {
               if (value.isEmpty) {
-                return 'Km.';
+                return 'Будь-ласка введіть дані!';
               }
             },
           ),
           Padding(
-            padding:  const EdgeInsets.symmetric(vertical: 16.0, horizontal: 140.0),
+            padding:  const EdgeInsets.symmetric(vertical: 18.0, horizontal: 130.0),
             child: RaisedButton(
+              child: Text('Зберегти'),
               onPressed: () {
                 // Validate will return true if the form is valid, or false if
                 // the form is invalid.
                 if (_formKey.currentState.validate()) {
                   // If the form is valid, we want to show a Snackbar
                   Scaffold.of(context)
-                      .showSnackBar(SnackBar(content: Text('Thank you!')));
+                      .showSnackBar(SnackBar(content: Text('Ваші дані збережено!')));
                 }
               },
-              child: Text('Sambit'),
             ),
           ),
         ],

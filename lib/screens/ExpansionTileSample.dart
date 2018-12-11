@@ -4,9 +4,10 @@ class ExpansionTileSample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('ExpansionTile'),
+          title: const Text('Список пройдених техоглядів'),
         ),
         body: ListView.builder(
           itemBuilder: (BuildContext context, int index) =>
@@ -32,42 +33,58 @@ final List<Entry> data = <Entry>[
     'передпродажний техогляд',
     <Entry>[
       Entry(
-        'Data',
+        'Дата: ',
         <Entry>[
-          Entry('...INFO...'),
+          Entry('12.10.2016 '),
         ],
       ),
-      Entry('Enter',
+      Entry('Пройдений кілометраж на даний техогляд: ',
           <Entry>[
-            Entry('Enter'),
+            Entry('0 km'),
           ]),
-      Entry('Works',
+      Entry('Зроблена робота:',
           <Entry>[
-            Entry('Enter'),
+            Entry('Було зроблено повний техогляд автомобіля.'),
           ]),
     ],
   ),
+
   Entry(
-    'техогляд 1',
+    'Плановий  техогляд №1',
     <Entry>[
-      Entry('Section B0'),
-      Entry('Section B1'),
-    ],
-  ),
-  Entry(
-    'техогляд 2',
-    <Entry>[
-      Entry('Section C0'),
-      Entry('Section C1'),
       Entry(
-        'Section C2',
+        'Дата: ',
         <Entry>[
-          Entry('Item C2.0'),
-          Entry('Item C2.1'),
-          Entry('Item C2.2'),
-          Entry('Item C2.3'),
+          Entry('12.10.2017'),
         ],
       ),
+      Entry('Пройдений кілометраж на даний техогляд: ',
+          <Entry>[
+            Entry('30 000 km'),
+          ]),
+      Entry('Зроблена робота:',
+          <Entry>[
+            Entry('Інформація: було замінено мастило в двигуні.'),
+          ]),
+    ],
+  ),
+  Entry(
+    'Плановий  техогляд №2',
+    <Entry>[
+      Entry(
+        'Дата: ',
+        <Entry>[
+          Entry('12.10.2018 '),
+        ],
+      ),
+      Entry('Пройдений кілометраж на даний техогляд: ',
+          <Entry>[
+            Entry('65 000 km'),
+          ]),
+      Entry('Зроблена робота:',
+          <Entry>[
+            Entry('Інформація: було замінено мастило в двигуні,а ткож заміна мастила в коропці.'),
+          ]),
     ],
   ),
 ];
