@@ -1,61 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/screens/note_list_date_teahouse.dart';
+import 'package:flutter_app/screens/note_list.dart';
+import 'package:flutter_app/screens/note_detail.dart';
 
 void main() {
-  runApp(MaterialApp(
-
-    home: FirstScreen(),
-  ));
+	runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-//dfsbsdfb
+
 	@override
   Widget build(BuildContext context) {
 
     return MaterialApp(
+	    title: 'Екран №2',
 	    debugShowCheckedModeBanner: false,
 	    theme: ThemeData(
-		    primarySwatch: Colors.green
-
+				// ignore: argument_type_not_assignable
+					primarySwatch: Colors.green
 	    ),
 	    home: NoteList(),
-
     );
   }
 }
-
-class FirstScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Car Helper'),
-      ),
-      body: Center(
-
-        child: RaisedButton(
-
-          child: new Container(
-            //width: 100.0,
-            height: 50.0,
-            decoration: new BoxDecoration(
-              color: Colors.blueAccent,
-              border: new Border.all(color: Colors.white, width: 2.0),
-              borderRadius: new BorderRadius.circular(10.0),
-            ),
-            child: new Center(child: new Text('Перейти до Техоглядів', style: new TextStyle(fontSize: 18.0, color: Colors.white),),),
-          ),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => NoteList()),
-            );
-          },
-        ),
-      ),
-    );
-  }
-}
-
-
