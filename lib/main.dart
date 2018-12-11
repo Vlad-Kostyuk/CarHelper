@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter_app/models/note.dart';
 import 'package:flutter_app/utils/database_date_teahouse.dart';
 import 'package:flutter_app/screens/note_list_date_teahouse.dart';
+import 'package:flutter_app/screens/screen_distance.dart';
 import 'package:flutter_app/screens/note_detail_date_teahouse.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
@@ -49,7 +50,7 @@ class FirstScreen extends StatelessWidget {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => NoteList()),
+              MaterialPageRoute(builder: (context) => Screen_distance()),
             );
           },
         ),

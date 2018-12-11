@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
+
+class Screen_distance extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
